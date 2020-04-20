@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><form action="" onsubmit="return validate();">
+        <h1 title="Форма регистрации">Регистрация</h1>
+        
+           <div class="group">
+            <label for="">Ф.И.О.</label>
+            <input type="text" id="userName">
+        </div>
+        
+           <div class="group">
+            <label for="">E-mail</label>
+            <input type="Email" id="userEmail">
+        </div>
+        
+           <div class="group">
+            <label for="">Пароль</label>
+            <input type="password" id="userPassword">
+        </div>
+        
+           <div class="group">
+            <label for="">Повторить пароль</label>
+            <input type="password" id="userPassword2">
+        </div>
+        
+        <div class="group">
+            <center><button>Зарегистрироваться</button></center>
+        </div>
+        
+        <div>
+            <a href"#" class="autorization">Уже зарегистрирован?</a>
+        </div>
+    
+    </form></center>
+    
+    <script>
+        
+        function validate() {
+            var userName = document.getElementById("userName");
+            var userEmail = document.getElementById("userEmail");
+            var userPassword = document.getElementById("userPassword");
+            var userPassword2 = document.getElementById("userPassword2");
+            
+            if(!userName.value) {
+                userName.style.border = "2px solid red";
+                return false;
+            }
+            if(!userEmail.value) {
+                userEmail.style.border = "2px solid red";
+                return false;
+            }
+            if(!userPassword.value) {
+                userPassword.style.border = "2px solid red";
+                return false;
+            }
+            if(!userPassword2.value) {
+                userPassword2.style.border = "2px solid red";
+                return false;
+            }
+            
+            return true;
+        }
+        
+    </script>
+    
+</body>
+</html>
